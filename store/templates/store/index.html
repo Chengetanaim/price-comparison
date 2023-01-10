@@ -1,0 +1,233 @@
+{% extends 'store/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    {% block title %}Home{% endblock title %}
+
+</head>
+{% block content %}
+<body>
+
+    <div>
+        <h1 class="text-center" style="margin-bottom: 25px;margin-top: 25px;">FEATURED LAPTOPS</h1>
+        <div class="container">
+            <div class="row product-list dev">
+                    {% for laptop in laptops_random %}
+                    <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
+                        <div class="product-container">
+                            <div class="row">
+                                <div class="col-md-12"><a class="product-image" href="{{ laptop.url }}" target="_blank" rel="noopener noreferrer"><img src="{{ laptop.image }}"></a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <h2><a href="{{ laptop.url }}" target="_blank" rel="noopener noreferrer">{{ laptop.name }}</a></h2>
+                                </div>
+                                <div class="col-4"><a class="small-text" href="{% url 'store:website' laptop.website.id %}">{{ laptop.website }} </a></div>
+                            </div>
+                            <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="{{ laptop.url }}" target="_blank" rel="noopener noreferrer">{{ laptop.name }}</a></div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="product-description">{{ laptop.description }} </p>
+
+                                    <div class="row">
+                                        <div class="col-6"><a href="{{ laptop.url }}"><button class="btn btn-light" type="button" >Visit Now!</button></a></div>
+                                        <div class="col-6">
+                                            <p class="product-price">{{ laptop.price }} </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for laptop in laptops_random2 %}
+                    <div class="col-sm-6 col-md-4 product-item animation-element slide-rotate-clockwise">
+                        <div class="product-container">
+                            <div class="row">
+                                <div class="col-md-12"><a class="product-image" href="{{ laptop.url }}" target="_blank" rel="noopener noreferrer"><img src="{{ laptop.image }}"></a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <h2><a href="{{ laptop.url }}" target="_blank" rel="noopener noreferrer">{{ laptop.name }}</a></h2>
+                                </div>
+                                <div class="col-4"><a class="small-text" href="{% url 'store:website' laptop.website.id %}">{{ laptop.website }} </a></div>
+                            </div>
+                            <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="{{ laptop.url }}" target="_blank" rel="noopener noreferrer">{{ laptop.name }}</a></div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="product-description">{{ laptop.description }} </p>
+                                    <div class="row">
+                                        <div class="col-6"><button class="btn btn-light" type="button">Visit Now!</button></div>
+                                        <div class="col-6">
+                                            <p class="product-price">{{ laptop.price }} </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for laptop in laptops_random3 %}
+
+
+                    <div class="col-sm-6 col-md-4 product-item animation-element slide-top-right">
+                        <div class="product-container">
+                            <div class="row">
+                                <div class="col-md-12"><a class="product-image" href="{{ laptop.url }}"><img src="{{ laptop.image }}"></a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <h2><a href="{{ laptop.url }}" target="_blank" rel="noopener noreferrer">{{ laptop.name }}</a></h2>
+                                </div>
+                                <div class="col-4"><a class="small-text" href="{% url 'store:website' laptop.website.id %}">{{ laptop.website }} </a></div>
+                            </div>
+                            <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="{{ laptop.url }}" target="_blank" rel="noopener noreferrer">{{ laptop.name }}</a></div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="product-description">{{ laptop.description }} </p>
+                                    <div class="row">
+                                        <div class="col-6"><button class="btn btn-light" type="button">Visit Now!</button></div>
+                                        <div class="col-6">
+                                            <p class="product-price">{{ laptop.price }} </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+        <h1 class="text-center" style="margin-bottom: 25px;margin-top: 25px;">FEATURED HEADPHONES</h1>
+        <div class="container">
+            <div class="row product-list dev">
+                    {% for headphone in headphones_random4 %}
+                        <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
+                            <div class="product-container">
+                                <div class="row">
+                                    <div class="col-md-12"><a class="product-image" href="{{ headphone.url }}" target="_blank" rel="noopener noreferrer"><img src="{{ headphone.image }}"></a></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h2><a href="{{ headphone.url }}" target="_blank" rel="noopener noreferrer">{{ headphone.name }}</a></h2>
+                                    </div>
+                                    <div class="col-4"><a class="small-text" href="{% url 'store:website' headphone.website.id %}">{{ headphone.website }} </a></div>
+                                </div>
+                                <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="{{ headphone.url }}" target="_blank" rel="noopener noreferrer">{{ headphone.name }}</a></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="product-description">{{ headphone.description }} </p>
+                                        <div class="row">
+                                            <div class="col-6"><button class="btn btn-light" type="button">Visit Now!</button></div>
+                                            <div class="col-6">
+                                                <p class="product-price">{{ headphone.price }} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {% for headphone in headphones_random5 %}
+
+                        <div class="col-sm-6 col-md-4 product-item animation-element slide-rotate-clockwise">
+                            <div class="product-container">
+                                <div class="row">
+                                    <div class="col-md-12"><a class="product-image" href="{{ headphone.url }}" target="_blank" rel="noopener noreferrer"><img src="{{ headphone.image }}"></a></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h2><a href="{{ headphone.url }}" target="_blank" rel="noopener noreferrer">{{ headphone.name }}</a></h2>
+                                    </div>
+                                    <div class="col-4"><a class="small-text" href="{% url 'store:website' headphone.website.id %}">{{ headphone.website }} </a></div>
+                                </div>
+                                <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="{{ headphone.url }}" target="_blank" rel="noopener noreferrer">{{ headphone.name }}</a></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="product-description">{{ headphone.description }} </p>
+                                        <div class="row">
+                                            <div class="col-6"><button class="btn btn-light" type="button">Visit Now!</button></div>
+                                            <div class="col-6">
+                                                <p class="product-price">{{ headphone.price }} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {% for headphone in headphones_random6 %}
+                        <div class="col-sm-6 col-md-4 product-item animation-element slide-top-right">
+                            <div class="product-container">
+                                <div class="row">
+                                    <div class="col-md-12"><a class="product-image" href="{{ headphone.url }}" target="_blank" rel="noopener noreferrer"><img src="{{ headphone.image }}"></a></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h2><a href="{{ headphone.url }}" target="_blank" rel="noopener noreferrer">{{ headphone.name }}</a></h2>
+                                    </div>
+                                    <div class="col-4"><a class="small-text" href="{% url 'store:website' headphone.website.id %}">{{ headphone.website }} </a></div>
+                                </div>
+                                <div class="product-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i><a class="small-text" href="{{ headphone.url }}" target="_blank" rel="noopener noreferrer">{{ headphone.name }}</a></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="product-description">{{ headphone.description }} </p>
+                                        <div class="row">
+                                            <div class="col-6"><button class="btn btn-light" type="button">Visit Now!</button></div>
+                                            <div class="col-6">
+                                                <p class="product-price">{{ headphone.price }} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    <section class="features-clean">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">WHAT DO WE OFFER?</h2>
+                <p class="text-center">PRICEY!! is an e-commerce platform determined to find the best deals for customers.&nbsp; We look for products on the most popular websites in Zimbabwe and display them on our platform, helping customers find products at their ideal price.</p>
+            </div>
+            <div class="row features" data-bss-hover-animate="bounce">
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-map-marker icon"></i>
+                    <h3 class="name">SHOP ANYWHERE</h3>
+                    <p class="description">We are with you everywhere!&nbsp; Our website is available online so that means you can easily connect to the internet and shop no matter where you are.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-calendar-check-o icon" data-bss-hover-animate="bounce"></i>
+                    <h3 class="name">Always available</h3>
+                    <p class="description">Our 24/7 services ensure that you can contact us at any time of the day.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-refresh icon"></i>
+                    <h3 class="name">FRESH UPDATES</h3>
+                    <p class="description">We update our website on the regular so never worry about being left out.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-leaf icon"></i>
+                    <h3 class="name">BEST CONTENT</h3>
+                    <p class="description">This website is mainly for tech enthusiasts.&nbsp; We offer the best electronics products distributed across Zimbabwe.&nbsp; The products listed here are of the highest quality.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-plane icon"></i>
+                    <h3 class="name">Fast</h3>
+                    <p class="description">You can quickly load our website without any delays in process.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-search icon"></i>
+                    <h3 class="name">EASY SEARCH</h3>
+                    <p class="description">Our rich database enables users to easily search for information.&nbsp; Trust us, you'll always get what you are looking for,</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+{% endblock content %}
+
+</html>
